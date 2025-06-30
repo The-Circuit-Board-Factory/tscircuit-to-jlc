@@ -14,10 +14,10 @@ import {
   convertCircuitJsonToPickAndPlaceCsv,
   convertCircuitJsonToPickAndPlaceRows,
 } from "circuit-json-to-pnp-csv"
+import AdmZip from 'adm-zip';
 
 import fs from 'fs';
 import path from 'path';
-import AdmZip from 'adm-zip';
 
 // Get command line argument
 const entryFile = process.argv[2];
@@ -116,7 +116,7 @@ console.log('Generated pnp.csv');
 // zip up the output files
 const zipPath = path.join(process.cwd(), 'output.zip');
 const zip = new AdmZip();
-zip.addLocalFolder(outputDir);
+zip.addLocalFolder(outputDir, path.join(outputDir, 'output'));
 zip.writeZip(zipPath);
 console.log('Generated output.zip');
 
