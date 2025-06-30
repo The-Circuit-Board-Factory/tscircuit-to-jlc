@@ -1,7 +1,6 @@
 {
   "bin": {
     "tscircuit-to-jlc": "./bin/tscircuit-to-jlc.js",
-    "easyeda-import": "./bin/easyeda-import.js"
   },
   "type": "module",
   "dependencies": {
