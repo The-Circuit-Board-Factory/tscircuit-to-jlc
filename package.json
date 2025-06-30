@@ -1,4 +1,6 @@
 {
+  "name": "tscircuit-to-jlc",
+  "version": "1.0.0",
   "bin": {
     "tscircuit-to-jlc": "./bin/tscircuit-to-jlc.js"
   },
