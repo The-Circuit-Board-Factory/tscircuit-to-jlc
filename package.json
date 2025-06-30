@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "circuit-json-to-bom-csv": "^0.0.7",
+    "circuit-json-to-gerber": "^0.0.25",
+    "circuit-json-to-pnp-csv": "^0.0.7"
+  }
+}
