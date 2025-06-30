@@ -1,6 +1,6 @@
 {
   "bin": {
-    "tscircuit-to-jlc": "./bin/tscircuit-to-jlc.js",
+    "tscircuit-to-jlc": "./bin/tscircuit-to-jlc.js"
   },
   "type": "module",
   "dependencies": {
