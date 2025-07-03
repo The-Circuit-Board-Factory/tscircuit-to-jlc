@@ -15,6 +15,7 @@
     "circuit-json-to-pnp-csv": "^0.0.7",
     "circuit-to-svg": "github:The-Circuit-Board-Factory/circuit-to-svg",
     "debug": "^4.4.1",
-    "easyeda": "^0.0.192"
+    "easyeda": "^0.0.192",
+    "schematic-symbols": "^0.0.166"
   }
 }
