@@ -58,6 +58,16 @@ fs.mkdirSync(outputDir, { recursive: true });
 const circuitJson = JSON.parse(fs.readFileSync(tempFile, 'utf8'));
 fs.unlinkSync(tempFile); // Clean up temp file before exiting
 
+// Check if there are any autorouting errors in the generated file
+const autoroutingErrors = circuitJson.filter(component => component.type === 'pcb_autorouting_error');
+if (autoroutingErrors.length > 0) {
+  console.error('Autorouting errors found in the generated file');
+  for (const error of autoroutingErrors) {
+    console.error(error.message);
+  }
+  process.exit(1);
+}
+
 // Convert Circuit JSON to Gerber commands
 const gerberCommands = convertSoupToGerberCommands(circuitJson)
 
